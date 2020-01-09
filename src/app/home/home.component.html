@@ -1,14 +1,45 @@
-<input type="text" placeholder="Buscar Amigo" [(ngModel)]="query">
-<br />
-<b>Amigos</b>
-<ng-container *ngFor="let user of friends | search:query; let i = index">
+<div id="homeContainer">
 
-    <div>
-        <img id="estaus-logo" src="../../assets/img/logo_live_{{user.status}}.png">
-        <a routerLink="/conversation/{{user.uid}}">
-        {{i}}. {{user.nick}} - {{user.email}}
-    </a>
+    <div class="whiteBorderGlassBox">
+        <div class="homeHeadContainer">
+            <div class="row">
+                <div class="col-md-auto">
+                    <div class="avatarFrameOffLine">
+                        <img src="../../assets/img/generic_avatar.png" id="homeAvartarPicture">
+                    </div>
+                </div>
+                <div class="col">
+                    <b>Campoy</b>
+                    <div>
+                        <span>Online</span>
+                        <br />
+                        <span>Este es mi sesion de Mesanger</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</ng-container>
 
-<h1>Este es un mensaje de prueba de commits</h1>
+    <div class="whiteContainerPadded marto15">
+
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Buscar Amigo" [(ngModel)]="query">
+            </div>
+            <div class="col-md-auto">
+                <img src="../../assets/img/logo_live_add.png" class="icon" />
+            </div>
+        </div>
+        <hr />
+        <b>Amigos ({{friends.length}}/{{friends.length}})</b>
+        <div *ngFor="let user of friends | search:query; let i = index" class="disblo marbo5">
+            <img id="estaus-logo" src="../../assets/img/logo_live_{{user.status}}.png">
+            <samp routerLink="/conversation/{{user.uid}}">
+                <img src="../../assets//img/logo_live_online.png" class="icon"> <b>{{user.nick}}</b> - {{user.subnick||'No Subnick'}}
+                <small>{{user.email}}</small>
+            </samp>
+        </div>
+    </div>
+
+
+</div>

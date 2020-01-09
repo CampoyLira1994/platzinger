@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+
+.avatarFrameoline {
+    background: rgba(210, 255, 82, 1);
+    background: -moz-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(210, 255, 82, 1)), color-stop(100%, rgba(28, 217, 78, 1)));
+    background: -webkit-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    background: -o-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    background: linear-gradient(to bottom, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#1cd94e', GradientType=0);
+    text-align: center;
+    padding: 5%;
+    border-radius: 10px;
+    border: 1px solid white;
+    display: inline-block;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.marto15 {
+    margin-top: 15px;
+}
+
+.marbo15 {
+    margin-bottom: 15px;
+}
+
+.pato45 {
+    padding-top: 45px;
+}
+
+.avatarImage {
+    width: 160px;
+}
+
+.input[type="file"] {
+    display: none;
+}
+
+.costo-file-upload {
+    background: rgba(183, 222, 237, 1);
+    background: -moz-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183, 222, 237, 1)), color-stop(50%, rgba(113, 206, 239, 1)), color-stop(51%, rgba(33, 180, 226, 1)), color-stop(100%, rgba(183, 222, 237, 1)));
+    background: -webkit-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
+    background: -o-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
+    background: linear-gradient(to bottom, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=0);
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid #8dd2f3;
+}
