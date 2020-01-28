@@ -1,0 +1,27 @@
+.conversationConteiner {
+    background-image: url(../../assets/img/msnbg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.buttonInis {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid #008CBA;
+}
+
+.avatarFrameolineconversation {
+    background: rgba(210, 255, 82, 1);
+    background: -moz-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(210, 255, 82, 1)), color-stop(100%, rgba(28, 217, 78, 1)));
+    background: -webkit-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    background: -o-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    background: linear-gradient(to bottom, rgba(210, 255, 82, 1) 0%, rgba(28, 217, 78, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#1cd94e', GradientType=0);
+    text-align: center;
+    padding: 5%;
+    border-radius: 10px;
+    border: 1px solid white;
+    display: inline-block;
+}

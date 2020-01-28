@@ -1,9 +1,35 @@
-<p>
-    {{this.friend | json}}
-</p>
-<p>
-    {{this.price | number: '1.2-2'}}
-</p>
-<p>
-    {{this.todey | date: 'medium'}}
-</p>
+<div class="conversationConteiner">
+    <div class="whiteBorderGlassBox">
+        <div class="homeHeadContainer">
+            <div class="row">
+                <div class="col-md-auto">
+                    <div class="avatarFrameolineconversation">
+                        <img src="../../assets/img/generic_avatar.png" id="homeAvartarPicture">
+                    </div>
+                </div>
+                <div class="col">
+                    <b>Campoy</b>
+                    <div>
+                        <span>Online</span>
+                        <br />
+                        <span>Este es mi sesion de Mesanger</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="whiteContainerPadded marto15">
+
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Buscar Amigo" [(ngModel)]="query">
+            </div>
+            <div class="col-md-auto">
+                <img src="../../assets/img/logo_live_add.png" class="icon" />
+            </div>
+        </div>
+        <hr />
+        <b>Amigos ({{friends.length}}/{{friends.length}})</b>
+
+    </div>

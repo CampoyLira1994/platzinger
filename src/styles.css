@@ -36,19 +36,21 @@
     width: 160px;
 }
 
-.input[type="file"] {
+input[type="file"] {
     display: none;
 }
 
-.costo-file-upload {
-    background: rgba(183, 222, 237, 1);
-    background: -moz-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183, 222, 237, 1)), color-stop(50%, rgba(113, 206, 239, 1)), color-stop(51%, rgba(33, 180, 226, 1)), color-stop(100%, rgba(183, 222, 237, 1)));
-    background: -webkit-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    background: -o-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    background: -ms-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    background: linear-gradient(to bottom, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=0);
+.custom-file-upload {
+    background: #f2f6f8;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0);
+    /* IE6-9 */
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;

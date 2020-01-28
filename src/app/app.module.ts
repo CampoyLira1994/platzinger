@@ -15,7 +15,7 @@ const appRoutes: Routes = [
   {path:'home',component: HomeComponent},
   {path:'login',component: LoginComponent},
   {path:'conversation/:uid',component: ConversationComponent},
-  {path:'profile',component: ProfileComponent}
+  {path:'profile',component: ProfileComponent},
 
 ];
 @NgModule({
