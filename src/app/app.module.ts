@@ -9,6 +9,12 @@ import { ProfileComponent } from './profile/profile.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { SearchPipe } from './pipes/search';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { CommonModule }                             from '@angular/common';
+import { ReactiveFormsModule }         from '@angular/forms';
+
+
 
 const appRoutes: Routes = [
   {path:'',component:HomeComponent},
@@ -26,14 +32,27 @@ const appRoutes: Routes = [
     ConversationComponent,
     ProfileComponent,
     MenuComponent,
-    SearchPipe
+    SearchPipe,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
-  ],
+    FormsModule,
+    HttpModule,
+    CommonModule,
+    ReactiveFormsModule
+],
+ 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
+  exports:[
+  ConversationComponent,
+  CommonModule,
+  FormsModule,
+  ReactiveFormsModule
+],
+
 })
 export class AppModule { }

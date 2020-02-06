@@ -25,3 +25,58 @@
     border: 1px solid white;
     display: inline-block;
 }
+
+#conversationContainer {
+    background-image: url('/assets/img/msnbg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.friend-nick {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.friend-status {
+    font-size: 1rem;
+}
+
+.friend-subnick {
+    font-size: 1.2rem;
+}
+
+.chat-nick {
+    font-weight: bold;
+}
+
+.chat-button {
+    padding: 10px;
+}
+
+.chat-friend {
+    border-radius: 2px;
+    /* background-color: aquamarine; */
+}
+
+.speech-bubble {
+    position: relative;
+    background: #00aabb;
+    border-radius: .4em;
+}
+
+.speech-bubble-me {
+    position: relative;
+    background: #b0fcb9;
+    border-radius: .4em;
+}
+
+.avatarUser {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.zumbido_img {
+    width: 80px;
+}

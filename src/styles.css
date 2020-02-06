@@ -28,6 +28,22 @@
     margin-bottom: 15px;
 }
 
+.generalContent {
+    margin-top: 56px;
+}
+
+#homeAvatarPicture {
+    max-width: 100px;
+}
+
+.disblo {
+    display: block !important;
+}
+
+.marbo5 {
+    margin-bottom: 5px;
+}
+
 .pato45 {
     padding-top: 45px;
 }

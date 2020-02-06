@@ -1,35 +1,55 @@
-<div class="conversationConteiner">
-    <div class="whiteBorderGlassBox">
-        <div class="homeHeadContainer">
-            <div class="row">
-                <div class="col-md-auto">
-                    <div class="avatarFrameolineconversation">
-                        <img src="../../assets/img/generic_avatar.png" id="homeAvartarPicture">
-                    </div>
+<form [formGroup]="captura">
+
+    <div id="conversationContainer">
+        <div class="col-md-3 d-flex flex-column">
+            <div class="avatarFrameOnline">
+                <img src="assets/img/logo_live_online.png" class="avatarImage img-fluid" alt="Avatar">
+            </div>
+            <hr />
+        </div>
+        <div class="col-md-9 d-flex flex-column">
+            <div>
+                <div>
+                    <span class="friend-nick">{{ friend.nick }}</span> - <span class="friend-status">({{ friend.status }})</span>
                 </div>
-                <div class="col">
-                    <b>Campoy</b>
-                    <div>
-                        <span>Online</span>
-                        <br />
-                        <span>Este es mi sesion de Mesanger</span>
-                    </div>
+                <div>
+                    <span class="friend-subnick">{{ friend.subnick }}</span>
                 </div>
+                <hr />
+                <div class="content-text">
+
+
+                </div>
+
             </div>
         </div>
     </div>
 
-    <div class="whiteContainerPadded marto15">
-
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Buscar Amigo" [(ngModel)]="query">
-            </div>
-            <div class="col-md-auto">
-                <img src="../../assets/img/logo_live_add.png" class="icon" />
+    <div class="d-flex flew-row">
+        <div class="col-md-3 d-flex flex-column">
+            <div class="avatarFrameOnline">
+                <img src="assets/img/logo_live_busy.png" class="avatarImage img-fluid" alt="Avatar">
             </div>
         </div>
-        <hr />
-        <b>Amigos ({{friends.length}}/{{friends.length}})</b>
+        <div class="col-md-9 d-flex flex-column" id="chat-col">
 
+            <div>
+                <textarea id="exampleFormControlTextarea1" rows="5" class="form-control" formControlName="comentarios">
+                       
+                </textarea>
+            </div>
+            <div class="chat-button d-flex justify-content-end align-items-center">
+
+                <div>
+                    <label class="custom-file-upload"><input type="file" multiple accept="image/*" name="images" id="images" >Subir Imagen</label>
+                </div>
+
+                <div>
+                </div>
+                <div>
+                    <a (click)="save(captura.value)" class="btn btn-outline-primary">Enviar</a>
+                </div>
+            </div>
+        </div>
     </div>
+</form>
