@@ -4,7 +4,6 @@ import { FormGroup, FormBuilder, Validators }           from '@angular/forms';
 
 import { User } from '../Interfaces/user';
 import { UserService } from '../services/user.service';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-conversation',
