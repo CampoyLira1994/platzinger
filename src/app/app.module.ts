@@ -22,6 +22,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 
 
+
 const appRoutes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component: HomeComponent},
