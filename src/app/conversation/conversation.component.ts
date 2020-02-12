@@ -13,11 +13,8 @@ import { UserService } from '../services/user.service';
 
 export class ConversationComponent implements OnInit {
 
-  friends:User[];
   friendid: any;
   friend: User;
-  price: number = 78.6553415465454;
-  todey:any  = Date.now();
   captura: FormGroup;
   chats:string[] =[];
 
@@ -27,11 +24,13 @@ export class ConversationComponent implements OnInit {
   { 
     this.friendid = this.activatdRoute.snapshot.params['uid'];
     console.log(this.friendid);
-// this.friends = userService.getfriends();
-
-      this.friend = this.friends.find((record) =>{
-        return record.uid == this.friendid;
-      });
+   
+    this.userService.getUserbyID(this.friendid).valueChanges().subscribe((data:User)=>{
+      this.friend =data;
+    },
+    (error)=>{
+      console.log(error);
+    })
       console.log(this.friend);
  
     }

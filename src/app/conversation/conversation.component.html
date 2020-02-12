@@ -10,7 +10,7 @@
                 <span class="friend-nick">{{ friend.nick }}</span> - <span class="friend-status">({{ friend.status }})</span>
             </div>
             <div>
-                <span class="friend-subnick">{{ friend.subnick }}</span>
+                <span class="friend-subnick">{{ friend | json}}</span>
             </div>
 
         </div>

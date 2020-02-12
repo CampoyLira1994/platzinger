@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   password:string=null;
   nick:string=null;
 
-  constructor(private authenticationService:AuthenticationService,private userService:UserService) { }
+  constructor(private authenticationService:AuthenticationService,private userService:UserService,private router:Router) { }
 
   ngOnInit() {
   }
@@ -22,8 +23,9 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.authenticationService.loginWhithEmail(this.email,this.password).then((data)=>{
-      alert('Loggeado correctamente');3.
+      alert('Logeado correctamente');3.
       console.log(data);
+      this.router.navigate(['home']);
       }).catch((error)=>{
         alert('Ocurrio un Error');
         console.log(error);

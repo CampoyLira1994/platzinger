@@ -5,15 +5,16 @@
             <div class="row">
                 <div class="col-md-auto">
                     <div class="avatarFrameOffLine">
-                        <img src="../../assets/img/generic_avatar.png" id="homeAvartarPicture">
+                        <img id="homeAvartarPicture" src="../../assets/img/logo_live_{{user.status}}.png">
                     </div>
                 </div>
-                <div class="col">
-                    <b>Campoy</b>
+                <div *ngIf="user" class="col">
+                    <b>{{user.subnick}}</b>
                     <div>
-                        <span>Online</span>
+                        <span>{{user.nick}}</span>
                         <br />
-                        <span>Este es mi sesion de Mesanger</span>
+                        <span>{{user.email}}</span><br/>
+                        <a (click)="logout()">Logout</a>
                     </div>
                 </div>
             </div>
@@ -31,11 +32,12 @@
             </div>
         </div>
         <hr />
-        <!-- <b>Amigos ({{friends.length}}/{{friends.length}})</b> -->
+        <b *ngIf="friends">Amigos ({{friends.length}}/{{friends.length}})</b>
         <div *ngFor="let user of friends | search:query; let i = index" class="disblo marbo5">
             <img id="estaus-logo" src="../../assets/img/logo_live_{{user.status}}.png">
             <samp routerLink="/conversation/{{user.uid}}">
-                <img src="../../assets//img/logo_live_online.png" class="icon"> <b>{{user.nick}}</b> - {{user.subnick||'No Subnick'}}
+                <!-- <img src="../../assets//img/logo_live_online.png" class="icon"> -->
+                 <b>{{user.nick}}</b> - {{user.subnick||'No Subnick'}}
                 <small>{{user.email}}</small>
             </samp>
         </div>
