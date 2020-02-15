@@ -2,19 +2,23 @@
     <div class="conteiner pato45">
         <div class="row">
             <div class="col-md-3">
-                <div class="avatarFrameoline">
-                    <img src="../../assets/img/generic_avatar.png" class="avatarImage img-fluid" />
+                <div class="avatarFrameoline" *ngIf="user">
+                    <img *ngIf="croppedImage || user.avatar" [src]="croppedImage || user.avatar " class="avatarImage img-fluid">
+                    <img *ngIf="!croppedImage && !user.avatar" id="homeAvartarPicture" src="../../assets/img/logo_live_{{user.status}}.png">
                 </div>
                 <hr />
                 <div>
                     <span>Cambiar Foto</span><br />
                     <label class="custom-file-upload">
-                    <input type="file">
+                    <input type="file" (change)="fileChangeEvent($event)">
                     Subir Avatar
                   </label>
                 </div>
             </div>
             <div *ngIf="user" class="col-md-9">
+                <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="1 / 1" format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()">
+                </image-cropper>
+
                 <div>
                     <label fixed>Nick</label>
                     <input [(ngModel)]="user.nick" type="text" class="form-control" />
@@ -37,7 +41,7 @@
                     </select>
                 </div>
                 <hr/>
-                <a (click)="salveSettings()" class="btn btn-primary btn-block">Guardar</a>
+                <a (click)="saveSettings()" class="btn btn-primary btn-block">Guardar</a>
             </div>
         </div>
     </div>

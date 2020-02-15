@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   friends:User[];
   query: string;
   user:User;
+  croppedImage: any = '';
 
   constructor(userService:UserService,private authenticationService:AuthenticationService,private roter:Router) {
     

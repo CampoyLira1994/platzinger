@@ -1,14 +1,39 @@
 #main-logo {
-    width: 60px;
+    width: 40px;
 }
 
-.fondoMain {
-    background: rgba(183, 222, 237, 1);
-    background: -moz-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183, 222, 237, 1)), color-stop(50%, rgba(113, 206, 239, 1)), color-stop(51%, rgba(33, 180, 226, 1)), color-stop(100%, rgba(183, 222, 237, 1)));
-    background: -webkit-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    background: -o-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    background: -ms-linear-gradient(top, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    background: linear-gradient(to bottom, rgba(183, 222, 237, 1) 0%, rgba(113, 206, 239, 1) 50%, rgba(33, 180, 226, 1) 51%, rgba(183, 222, 237, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=0);
+#menuContainer {
+    background: #8dd2f3;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #8dd2f3 0%, #43b5eb 50%, #39abe1 51%, #3cb2ea 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #8dd2f3 0%, #43b5eb 50%, #39abe1 51%, #3cb2ea 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #8dd2f3 0%, #43b5eb 50%, #39abe1 51%, #3cb2ea 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#8dd2f3', endColorstr='#3cb2ea', GradientType=0);
+    /* IE6-9 */
+    -webkit-box-shadow: 0px 15px 15px -4px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 15px 15px -4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 15px 15px -4px rgba(0, 0, 0, 0.24);
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    height: 56px;
+    top: 0px;
+    border-top: 1px solid white;
+}
+
+.branding {
+    padding: 5px !important;
+    border-top: none !important;
+    border-right: none !important;
+}
+
+#menuContainer>.item {
+    padding: 15px;
+    color: white;
+    cursor: default;
+    border: 1px solid white;
+    display: inline-block;
 }

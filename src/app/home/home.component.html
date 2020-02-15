@@ -4,8 +4,9 @@
         <div class="homeHeadContainer">
             <div class="row">
                 <div class="col-md-auto">
-                    <div class="avatarFrameOffLine">
-                        <img id="homeAvartarPicture" src="../../assets/img/logo_live_{{user.status}}.png">
+                    <div *ngIf="user" class="avatarFrameOnLine">
+                        <img *ngIf="user.avatar" [src]="user.avatar " class="avatarImage img-fluid" />
+                        <img *ngIf="!user.avatar" id="homeAvartarPicture" src="../../assets/img/logo_live_{{user.status}}.png">
                     </div>
                 </div>
                 <div *ngIf="user" class="col">
@@ -32,14 +33,16 @@
             </div>
         </div>
         <hr />
-        <b *ngIf="friends">Amigos ({{friends.length}}/{{friends.length}})</b>
-        <div *ngFor="let user of friends | search:query; let i = index" class="disblo marbo5">
-            <img id="estaus-logo" src="../../assets/img/logo_live_{{user.status}}.png">
-            <samp routerLink="/conversation/{{user.uid}}">
+        <div *ngIf="friends">
+            <b *ngIf="friends">Amigos ({{friends.length}}/{{friends.length}})</b>
+            <div *ngFor="let user of friends | search:query; let i = index" class="disblo marbo5">
+                <img id="estaus-logo" src="../../assets/img/logo_live_{{user.status}}.png">
+                <samp routerLink="/conversation/{{user.uid}}">
                 <!-- <img src="../../assets//img/logo_live_online.png" class="icon"> -->
                  <b>{{user.nick}}</b> - {{user.subnick||'No Subnick'}}
                 <small>{{user.email}}</small>
             </samp>
+            </div>
         </div>
     </div>
 
