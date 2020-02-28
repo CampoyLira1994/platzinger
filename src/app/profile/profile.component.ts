@@ -40,6 +40,7 @@ export class ProfileComponent implements OnInit {
       pictures.then((result) => {
         this.picture = this.firebaseStorage.ref('pictures/' + currentPictureId + '.jpg').getDownloadURL();
         this.picture.subscribe((p) => {
+          console.log("url de la imagen "+p);
           this.userService.setAvatar(p, this.user.uid).then(() => {
             alert('Avatar subido correctamentne');
           }).catch((error) => {

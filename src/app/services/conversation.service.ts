@@ -7,19 +7,23 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class ConversationService {
 
-  constructor(private angularFireDatabase:AngularFireDatabase) { }
-  
-  createConversation(conversation){
-  return this.angularFireDatabase.object('conversations/'+conversation.uid+'/'+conversation.timestamp).set(conversation);
+  constructor(private angularFireDatabase: AngularFireDatabase) { }
+
+  createConversation(conversation) {
+    return this.angularFireDatabase.object('conversations/' + conversation.uid + '/' + conversation.timestamp).set(conversation);
   }
 
-  getConversation(uid){
-  return this.angularFireDatabase.list('conversations/'+uid);
+  getConversation(uid) {
+    return this.angularFireDatabase.list('conversations/' + uid);
   }
 
-  editConversation(conversation){
-    return this.angularFireDatabase.object('conversations/'+conversation.uid+'/'+conversation.timestamp).set(conversation);
-    }
+  editConversation(conversation) {
+    return this.angularFireDatabase.object('conversations/' + conversation.uid + '/' + conversation.timestamp).set(conversation);
+  }
+
+  setImg(conversation) {
+    return this.angularFireDatabase.object('conversations/' + conversation.uid+ '/' +conversation.timestamop).set(conversation);
+  }
 
 
 }
