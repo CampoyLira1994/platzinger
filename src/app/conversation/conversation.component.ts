@@ -9,7 +9,6 @@ import { AuthenticationService } from '../services/authentication.service';
 import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
 import { AngularFireStorage } from '@angular/fire/storage';
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-conversation',
